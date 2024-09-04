@@ -4,7 +4,12 @@ alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def caesar_encode(text, n):
-    return ""
+    new_str = ""
+    for let in text:
+        index = alpha.index(let)
+        new_str += alpha[(index + n) % 26]
+        #new_str += alpha[5] #new_str = let + new_str
+    return new_str
 
 
 def caesar_decode(text, n):
