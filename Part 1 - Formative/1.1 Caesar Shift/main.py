@@ -13,7 +13,11 @@ def caesar_encode(text, n):
 
 
 def caesar_decode(text, n):
-    return ""
+    old_str = text
+    for let in text:
+        index = alpha.index(let)
+        old_str += alpha[(index - n) % 26]
+    return old_str
 
 
 test = "HELLOWORLD"
